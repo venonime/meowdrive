@@ -1,7 +1,7 @@
 <?php
 function my_simple_crypt( $string, $action = 'e' ) {
-  	$secret_key = 'drivekey';
-  	$secret_iv = 'google';
+  	$secret_key = 'budibego';
+  	$secret_iv = 'drivedimensiwibu';
   	$output = false;
   	$encrypt_method = "AES-256-CBC";
   	$key = hash( 'sha256', $secret_key );
@@ -48,7 +48,7 @@ function getDownload($id){
 if($_GET['id'] != ""){
 	$gid = $_GET['id'];
 	$original_id = my_simple_crypt($gid, 'd');
-	$url = "https://www.googleapis.com/drive/v2/files/$original_id?supportsTeamDrives=true&key=AIzaSyBPO_VhHtvTL-gs35Nb24cSsjuxQasjlN0";
+	$url = "https://www.googleapis.com/drive/v2/files/$original_id?supportsTeamDrives=true&key=AIzaSyDXKHe5UDkGfgIYQOdk5xKvs7C4rDMRSgA";
 	$json = file_get_contents($url);
 	$json_data = json_decode($json, true);
 }?>
